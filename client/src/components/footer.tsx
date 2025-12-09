@@ -1,4 +1,4 @@
-import { Leaf, Facebook, Instagram, Twitter } from "lucide-react";
+import { Leaf, Facebook } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
@@ -17,12 +17,6 @@ export function Footer() {
           <div className="flex gap-2">
             <Button size="icon" variant="ghost" data-testid="link-facebook">
               <Facebook className="h-5 w-5" />
-            </Button>
-            <Button size="icon" variant="ghost" data-testid="link-instagram">
-              <Instagram className="h-5 w-5" />
-            </Button>
-            <Button size="icon" variant="ghost" data-testid="link-twitter">
-              <Twitter className="h-5 w-5" />
             </Button>
           </div>
         </div>
