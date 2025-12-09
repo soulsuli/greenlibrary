@@ -1,5 +1,4 @@
-import { Leaf, Heart, Mail, Phone, MapPin } from "lucide-react";
-import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
+import { Leaf, Heart, Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,13 +18,13 @@ export function Footer() {
             </p>
             <div className="flex gap-2">
               <Button size="icon" variant="ghost" data-testid="link-facebook">
-                <SiFacebook className="h-5 w-5" />
+                <Facebook className="h-5 w-5" />
               </Button>
               <Button size="icon" variant="ghost" data-testid="link-instagram">
-                <SiInstagram className="h-5 w-5" />
+                <Instagram className="h-5 w-5" />
               </Button>
               <Button size="icon" variant="ghost" data-testid="link-twitter">
-                <SiTwitter className="h-5 w-5" />
+                <Twitter className="h-5 w-5" />
               </Button>
             </div>
           </div>
