@@ -11,11 +11,8 @@ export function Footer() {
             <Leaf className="h-8 w-8 text-primary" />
             <span className="font-display text-xl font-bold">المكتبة الخضراء</span>
           </Link>
-          <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-            مشروع بيئي مبتكر يتيح للطلاب تحويل ركن صغير في المدرسة إلى مساحة تعلم خضراء.
-          </p>
-          <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-            كل نبتة درس، وكل ركن أخضر فرصة لتعلّم جديد.
+          <p className="text-sm text-muted-foreground leading-relaxed max-w-lg">
+            مشروع بيئي مبتكر يتيح للطلاب تحويل ركن صغير في المدرسة إلى مساحة تعلم خضراء. كل نبتة درس، وكل ركن أخضر فرصة لتعلّم جديد.
           </p>
           <div className="flex gap-2">
             <Button size="icon" variant="ghost" data-testid="link-facebook">
