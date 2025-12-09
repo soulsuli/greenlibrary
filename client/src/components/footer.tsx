@@ -1,4 +1,4 @@
-import { Leaf, Heart, Facebook, Instagram, Twitter } from "lucide-react";
+import { Leaf, Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
@@ -28,8 +28,8 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t text-center">
-          <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-            صُنع بـ <Heart className="h-4 w-4 text-destructive fill-destructive" /> للنباتات
+          <p className="text-sm text-muted-foreground">
+            أسماء سليمان
           </p>
           <p className="text-xs text-muted-foreground mt-2">
             مدرسة عائشة بنت أبي بكر المختلطة
