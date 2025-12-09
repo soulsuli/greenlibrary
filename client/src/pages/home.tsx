@@ -1,89 +1,61 @@
-import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Header } from "@/components/header";
-import { HeroSection } from "@/components/hero-section";
-import { FilterChips } from "@/components/filter-chips";
-import { PlantGrid } from "@/components/plant-grid";
-import { Footer } from "@/components/footer";
-import type { Plant, PlantFilter } from "@shared/schema";
+import { Link } from "wouter";
+import { Leaf } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Skeleton } from "@/components/ui/skeleton";
+import type { Plant } from "@shared/schema";
+
+function PlantCircle({ plant }: { plant: Plant }) {
+  return (
+    <Link href={`/plant/${plant.slug}`}>
+      <div
+        className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center text-center cursor-pointer transition-all duration-200 hover:scale-105 hover:bg-primary/20 hover:border-primary/40"
+        data-testid={`circle-plant-${plant.id}`}
+      >
+        <span className="font-display font-bold text-sm md:text-base text-foreground px-2">
+          {plant.nameAr}
+        </span>
+      </div>
+    </Link>
+  );
+}
+
+function CircleSkeleton() {
+  return <Skeleton className="w-28 h-28 md:w-32 md:h-32 rounded-full" />;
+}
 
 export default function Home() {
-  const [searchValue, setSearchValue] = useState("");
-  const [filters, setFilters] = useState<PlantFilter>({});
-
   const { data: plants = [], isLoading } = useQuery<Plant[]>({
     queryKey: ["/api/plants"],
   });
 
-  const filteredPlants = useMemo(() => {
-    let result = plants;
-
-    if (searchValue) {
-      const search = searchValue.toLowerCase();
-      result = result.filter(
-        (plant) =>
-          plant.nameAr.includes(search) ||
-          plant.nameEn.toLowerCase().includes(search) ||
-          plant.scientificName.toLowerCase().includes(search)
-      );
-    }
-
-    if (filters.category) {
-      result = result.filter((plant) => plant.category === filters.category);
-    }
-
-    if (filters.difficulty) {
-      result = result.filter((plant) => plant.difficulty === filters.difficulty);
-    }
-
-    if (filters.sunlight) {
-      result = result.filter((plant) => plant.sunlight === filters.sunlight);
-    }
-
-    return result;
-  }, [plants, searchValue, filters]);
-
-  const handleFilterChange = (newFilters: PlantFilter) => {
-    setFilters(newFilters);
-  };
-
   return (
-    <div className="min-h-screen bg-background">
-      <Header 
-        searchValue={searchValue} 
-        onSearchChange={setSearchValue}
-      />
-      
-      <main>
-        <HeroSection />
-        
-        <section className="container mx-auto px-4 py-12">
-          <div className="mb-8">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2" data-testid="text-section-title">
-              اكتشف نباتاتنا
-            </h2>
-            <p className="text-muted-foreground">
-              تصفح مجموعتنا من النباتات واختر ما يناسبك
-            </p>
-          </div>
+    <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
+      <div className="absolute top-4 left-4">
+        <ThemeToggle />
+      </div>
 
-          <div className="mb-8 p-4 rounded-lg bg-card border">
-            <FilterChips filters={filters} onFilterChange={handleFilterChange} />
+      <div className="container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen">
+        <header className="text-center mb-12">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Leaf className="h-12 w-12 text-primary" />
           </div>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4" data-testid="text-title">
+            المكتبة الخضراء
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground" data-testid="text-subtitle">
+            اهتم بنبتتك، واكتشف كيف تصنع فرقًا!
+          </p>
+        </header>
 
-          <div className="mb-4 text-sm text-muted-foreground">
-            {!isLoading && (
-              <span data-testid="text-results-count">
-                عرض {filteredPlants.length} من {plants.length} نبتة
-              </span>
-            )}
-          </div>
-
-          <PlantGrid plants={filteredPlants} isLoading={isLoading} />
-        </section>
-      </main>
-      
-      <Footer />
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-4xl" data-testid="plants-grid">
+          {isLoading ? (
+            Array.from({ length: 16 }).map((_, i) => <CircleSkeleton key={i} />)
+          ) : (
+            plants.map((plant) => <PlantCircle key={plant.id} plant={plant} />)
+          )}
+        </div>
+      </div>
     </div>
   );
 }
