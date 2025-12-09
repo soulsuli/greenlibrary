@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المكتبة الخضراء</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: #f0fff0;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    header {
+        background-color: #4caf50;
+        color: white;
+        padding: 50px 20px;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 3em;
+    }
+    header p {
+        margin-top: 10px;
+        font-size: 1.2em;
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 40px 0;
+        gap: 20px;
+    }
+    .menu-item {
+        background-color: #e0ffe0;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1em;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.2s;
+    }
+    .menu-item:hover {
+        transform: scale(1.1);
+        background-color: #c8f7c8;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>المكتبة الخضراء</h1>
+    <p>اهتم بنبتتك، واكتشف كيف تصنع فرقًا!</p>
+</header>
+
+<div class="menu">
+    <div class="menu-item" onclick="location.href='#Ivy'">اللبلاب</div>
+    <div class="menu-item" onclick="location.href='#Tradescantia'">المكحلة</div>
+    <div class="menu-item" onclick="location.href='#Basil'">الريحان</div>
+    <div class="menu-item" onclick="location.href='#Tomato'">البندورة</div>
+    <div class="menu-item" onclick="location.href='#Coleus'">نبات السجاد</div>
+    <div class="menu-item" onclick="location.href='#Mint'">النعناع</div>
+    <div class="menu-item" onclick="location.href='#HeartColeus'">قلب عبد الوهاب</div>
+    <div class="menu-item" onclick="location.href='#Olive'">شتلة الزيتون</div>
+    <div class="menu-item" onclick="location.href='#Strawberry'">الفراولة</div>
+    <div class="menu-item" onclick="location.href='#Cactus'">الصبار</div>
+    <div class="menu-item" onclick="location.href='#Herbs'">النباتات العطرية</div>
+    <div class="menu-item" onclick="location.href='#Rosemary'">إكليل الجبل</div>
+    <div class="menu-item" onclick="location.href='#Thyme'">الزعتر</div>
+    <div class="menu-item" onclick="location.href='#Eucalyptus'">اليوكالبتوس</div>
+    <div class="menu-item" onclick="location.href='#Euphorbia'">يوفوربيا عصارية</div>
+    <div class="menu-item" onclick="location.href='#Peperomia'">البيبيروميا</div>
+</div>
+
+</body>
+</html>
