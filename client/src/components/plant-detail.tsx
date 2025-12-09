@@ -1,4 +1,4 @@
-import { ArrowRight, Droplets, Sun, Thermometer, Wind, Leaf, AlertTriangle, Lightbulb, Calendar } from "lucide-react";
+import { ArrowRight, Droplets, Sun, Thermometer, Wind, Leaf, AlertTriangle, Lightbulb, Calendar, Sparkles, ClipboardList } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -186,6 +186,38 @@ export function PlantDetail({ plant, isLoading }: PlantDetailProps) {
       </div>
 
       <div className="space-y-8">
+        {plant.didYouKnow && (
+          <section>
+            <h2 className="font-display text-2xl font-bold mb-4 flex items-center gap-2">
+              <Sparkles className="h-6 w-6 text-amber-500" />
+              هل تعلم؟
+            </h2>
+            <Card className="bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800">
+              <CardContent className="p-6">
+                <p className="text-foreground leading-relaxed" data-testid="text-did-you-know">
+                  {plant.didYouKnow}
+                </p>
+              </CardContent>
+            </Card>
+          </section>
+        )}
+
+        {plant.weeklyMission && (
+          <section>
+            <h2 className="font-display text-2xl font-bold mb-4 flex items-center gap-2">
+              <ClipboardList className="h-6 w-6 text-purple-500" />
+              مهمتك الأسبوعية
+            </h2>
+            <Card className="bg-purple-50 dark:bg-purple-950/20 border-purple-200 dark:border-purple-800">
+              <CardContent className="p-6">
+                <p className="text-foreground leading-relaxed" data-testid="text-weekly-mission">
+                  {plant.weeklyMission}
+                </p>
+              </CardContent>
+            </Card>
+          </section>
+        )}
+
         <section>
           <h2 className="font-display text-2xl font-bold mb-4 flex items-center gap-2">
             <Calendar className="h-6 w-6 text-primary" />

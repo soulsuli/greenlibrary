@@ -26,6 +26,8 @@ export const plantSchema = z.object({
   })),
   tips: z.array(z.string()),
   imageUrl: z.string().optional(),
+  didYouKnow: z.string().optional(),
+  weeklyMission: z.string().optional(),
 });
 
 export type Plant = z.infer<typeof plantSchema>;
