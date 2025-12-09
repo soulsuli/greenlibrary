@@ -1,18 +1,49 @@
-import { sql } from "drizzle-orm";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
+export const plantSchema = z.object({
+  id: z.string(),
+  nameAr: z.string(),
+  nameEn: z.string(),
+  slug: z.string(),
+  description: z.string(),
+  scientificName: z.string(),
+  category: z.enum(["indoor", "outdoor", "aromatic", "succulent", "edible"]),
+  difficulty: z.enum(["easy", "medium", "hard"]),
+  wateringFrequency: z.string(),
+  wateringDetails: z.string(),
+  sunlight: z.enum(["full_sun", "partial_shade", "shade", "indirect"]),
+  sunlightDetails: z.string(),
+  soilType: z.string(),
+  temperature: z.string(),
+  humidity: z.string(),
+  seasonalCare: z.array(z.object({
+    season: z.string(),
+    tips: z.string(),
+  })),
+  commonIssues: z.array(z.object({
+    issue: z.string(),
+    solution: z.string(),
+  })),
+  tips: z.array(z.string()),
+  imageUrl: z.string().optional(),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
+export type Plant = z.infer<typeof plantSchema>;
+
+export const plantFilterSchema = z.object({
+  category: z.enum(["indoor", "outdoor", "aromatic", "succulent", "edible"]).optional(),
+  difficulty: z.enum(["easy", "medium", "hard"]).optional(),
+  sunlight: z.enum(["full_sun", "partial_shade", "shade", "indirect"]).optional(),
+  search: z.string().optional(),
 });
 
-export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
+export type PlantFilter = z.infer<typeof plantFilterSchema>;
+
+export const users = {
+  id: "",
+  username: "",
+  password: "",
+};
+
+export type User = typeof users;
+export type InsertUser = Omit<User, "id">;
