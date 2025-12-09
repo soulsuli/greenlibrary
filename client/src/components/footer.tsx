@@ -15,9 +15,11 @@ export function Footer() {
             مشروع بيئي مبتكر يتيح للطلاب تحويل ركن صغير في المدرسة إلى مساحة تعلم خضراء. كل نبتة درس، وكل ركن أخضر فرصة لتعلّم جديد.
           </p>
           <div className="flex gap-2">
-            <Button size="icon" variant="ghost" data-testid="link-facebook">
-              <Facebook className="h-5 w-5" />
-            </Button>
+            <a href="https://www.facebook.com/share/1AJKZmjXHz/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+              <Button size="icon" variant="ghost" data-testid="link-facebook">
+                <Facebook className="h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
 
