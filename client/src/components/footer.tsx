@@ -12,7 +12,10 @@ export function Footer() {
             <span className="font-display text-xl font-bold">المكتبة الخضراء</span>
           </Link>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-            دليلك الشامل للعناية بالنباتات المنزلية. نساعدك على اختيار النباتات المناسبة ورعايتها بشكل صحيح.
+            مشروع بيئي مبتكر يتيح للطلاب تحويل ركن صغير في المدرسة إلى مساحة تعلم خضراء.
+          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
+            كل نبتة درس، وكل ركن أخضر فرصة لتعلّم جديد.
           </p>
           <div className="flex gap-2">
             <Button size="icon" variant="ghost" data-testid="link-facebook">
