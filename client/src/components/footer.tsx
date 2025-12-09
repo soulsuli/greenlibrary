@@ -32,7 +32,7 @@ export function Footer() {
             مدرسة عائشة بنت أبي بكر المختلطة
           </p>
           <p className="text-xs text-muted-foreground mt-2">
-            برمجة أسماء سلمان
+            برمجة م.أسماء سليمان
           </p>
         </div>
       </div>
