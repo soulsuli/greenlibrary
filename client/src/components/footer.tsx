@@ -29,10 +29,10 @@ export function Footer() {
 
         <div className="mt-8 pt-6 border-t text-center">
           <p className="text-sm text-muted-foreground">
-            أسماء سليمان
+            مدرسة عائشة بنت أبي بكر المختلطة
           </p>
           <p className="text-xs text-muted-foreground mt-2">
-            مدرسة عائشة بنت أبي بكر المختلطة
+            برمجة أسماء سلمان
           </p>
         </div>
       </div>
