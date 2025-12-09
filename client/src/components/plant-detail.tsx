@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Skeleton } from "@/components/ui/skeleton";
 import type { Plant } from "@shared/schema";
+import { plantImages } from "@/lib/plant-images";
 
 interface PlantDetailProps {
   plant: Plant | undefined;
@@ -94,14 +95,22 @@ export function PlantDetail({ plant, isLoading }: PlantDetailProps) {
       </Link>
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-          <Leaf className="h-32 w-32 text-primary/30" />
+        <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5">
+          {plantImages[plant.slug] ? (
+            <img 
+              src={plantImages[plant.slug]} 
+              alt={plant.nameAr}
+              className="w-full h-full object-cover"
+              data-testid="img-plant"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <Leaf className="h-32 w-32 text-primary/30" />
+            </div>
+          )}
           <div className="absolute top-4 left-4 flex gap-2">
             <Badge className={`${difficultyColors[plant.difficulty]} border-0`}>
               {difficultyLabels[plant.difficulty]}
-            </Badge>
-            <Badge variant="secondary">
-              {categoryLabels[plant.category]}
             </Badge>
           </div>
         </div>
