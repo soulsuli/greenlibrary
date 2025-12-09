@@ -32,7 +32,7 @@ export function Footer() {
             صُنع بـ <Heart className="h-4 w-4 text-destructive fill-destructive" /> للنباتات
           </p>
           <p className="text-xs text-muted-foreground mt-2">
-            © 2024 المكتبة الخضراء. جميع الحقوق محفوظة.
+            مدرسة عائشة بنت أبي بكر المختلطة
           </p>
         </div>
       </div>
