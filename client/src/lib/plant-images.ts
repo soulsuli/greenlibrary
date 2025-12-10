@@ -11,7 +11,7 @@ import cactusImage from "@assets/stock_images/cactus_desert_plant__972e2db3.jpg"
 import herbsImage from "@assets/generated_images/sweet_woodruff_plant_flowers.png";
 import rosemaryImage from "@assets/stock_images/rosemary_herb_plant__67eb1de0.jpg";
 import thymeImage from "@assets/stock_images/thyme_herb_plant_ae882036.jpg";
-import eucalyptusImage from "@assets/generated_images/eucalyptus_leaves_branch.png";
+import eucalyptusImage from "@assets/generated_images/clean_eucalyptus_branch.png";
 import euphorbiaImage from "@assets/stock_images/succulent_echeveria__b1d9b458.jpg";
 import peperomiaImage from "@assets/generated_images/peperomia_round_leaves_plant.png";
 
