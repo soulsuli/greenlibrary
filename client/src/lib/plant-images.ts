@@ -13,7 +13,7 @@ import rosemaryImage from "@assets/stock_images/rosemary_herb_plant__67eb1de0.jp
 import thymeImage from "@assets/stock_images/thyme_herb_plant_ae882036.jpg";
 import eucalyptusImage from "@assets/fca983c7-7d95-4e69-9b1d-7dce4b8f9b32_1765309860906.jpg";
 import euphorbiaImage from "@assets/stock_images/succulent_echeveria__b1d9b458.jpg";
-import peperomiaImage from "@assets/5274d76d-b937-4a99-b10a-2450ef1d18bc_1765309809609.jpg";
+import peperomiaImage from "@assets/generated_images/peperomia_round_leaves_plant.png";
 
 export const plantImages: Record<string, string> = {
   "ivy": ivyImage,
