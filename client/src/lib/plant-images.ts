@@ -1,5 +1,5 @@
 import ivyImage from "@assets/stock_images/ivy_plant_hedera_hel_7728ab6a.jpg";
-import tradescantiaImage from "@assets/stock_images/tradescantia_wanderi_7821ebe8.jpg";
+import tradescantiaImage from "@assets/stock_images/tradescantia_zebrina_22eb4e21.jpg";
 import basilImage from "@assets/stock_images/basil_herb_plant_gre_91f4c382.jpg";
 import tomatoImage from "@assets/stock_images/tomato_plant_with_re_c749f163.jpg";
 import coleusImage from "@assets/stock_images/coleus_plant_colorfu_a67849c5.jpg";
