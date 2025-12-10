@@ -3,6 +3,7 @@ import tradescantiaImage from "@assets/stock_images/tradescantia_wanderi_7821ebe
 import basilImage from "@assets/stock_images/basil_herb_plant_gre_91f4c382.jpg";
 import tomatoImage from "@assets/stock_images/tomato_plant_with_re_c749f163.jpg";
 import coleusImage from "@assets/stock_images/coleus_plant_colorfu_a67849c5.jpg";
+import heartColeusImage from "@assets/stock_images/coleus_heart_shaped__911e8609.jpg";
 import mintImage from "@assets/stock_images/mint_plant_fresh_gre_4ce161e5.jpg";
 import oliveImage from "@assets/stock_images/olive_tree_plant_gre_9db20627.jpg";
 import strawberryImage from "@assets/stock_images/strawberry_plant_wit_152ad483.jpg";
@@ -21,7 +22,7 @@ export const plantImages: Record<string, string> = {
   "tomato": tomatoImage,
   "coleus": coleusImage,
   "mint": mintImage,
-  "heart-coleus": coleusImage,
+  "heart-coleus": heartColeusImage,
   "olive": oliveImage,
   "strawberry": strawberryImage,
   "cactus": cactusImage,
