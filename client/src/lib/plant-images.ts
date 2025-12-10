@@ -8,7 +8,7 @@ import mintImage from "@assets/stock_images/mint_plant_fresh_gre_4ce161e5.jpg";
 import oliveImage from "@assets/stock_images/olive_tree_plant_gre_9db20627.jpg";
 import strawberryImage from "@assets/stock_images/strawberry_plant_wit_152ad483.jpg";
 import cactusImage from "@assets/stock_images/cactus_desert_plant__972e2db3.jpg";
-import herbsImage from "@assets/9ffb674b-d971-42d8-bd38-cfcd0d8e5489_1765309901975.jpg";
+import herbsImage from "@assets/generated_images/aromatic_geranium_houseplant.png";
 import rosemaryImage from "@assets/stock_images/rosemary_herb_plant__67eb1de0.jpg";
 import thymeImage from "@assets/stock_images/thyme_herb_plant_ae882036.jpg";
 import eucalyptusImage from "@assets/fca983c7-7d95-4e69-9b1d-7dce4b8f9b32_1765309860906.jpg";
